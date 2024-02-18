@@ -35,7 +35,7 @@ public class Etudiant {
     private Formation formation;
     @ManyToMany
     @JoinTable(name="work",
-            joinColumns=@JoinColumn(name="idEtudiant"),
-            inverseJoinColumns=@JoinColumn(name="idProject"))
-    private List<Etudiant> lesEtudiants;
+                joinColumns=@JoinColumn(name="idEtudiant"),
+                inverseJoinColumns=@JoinColumn(name="idProject"))
+    private List<Project> lesProjets;
 }

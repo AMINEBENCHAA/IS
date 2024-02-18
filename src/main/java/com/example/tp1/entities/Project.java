@@ -19,9 +19,6 @@ public class Project {
     @Column(nullable = false)
     private  String name;
 
-    @ManyToMany
-    @JoinTable(name="work",
-            joinColumns=@JoinColumn(name="idProject"),
-            inverseJoinColumns=@JoinColumn(name="idEtudiant"))
+    @ManyToMany(mappedBy = "lesProjets")
     private List<Etudiant> lesEtudiants;
 }
